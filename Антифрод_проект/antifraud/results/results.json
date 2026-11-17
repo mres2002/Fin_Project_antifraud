@@ -1,0 +1,101 @@
+{
+  "data": {
+    "n": 120000,
+    "n_train": 72000,
+    "n_val": 18000,
+    "n_test": 30000,
+    "fraud_rate": 0.02,
+    "n_fraud": 2400
+  },
+  "baseline": {
+    "roc_auc": 0.9842,
+    "pr_auc": 0.9143,
+    "precision": 0.6149,
+    "recall": 0.9099,
+    "f1": 0.7339,
+    "fpr": 0.0114,
+    "threshold": 0.1776
+  },
+  "baseline_importance": {
+    "log_distance": 0.321,
+    "amount_to_avg": 0.126,
+    "log_account_age": 0.06,
+    "mcc": 0.047,
+    "log_amount": 0.02,
+    "tx_count_1h": 0.014,
+    "is_new_device": 0.01,
+    "is_foreign": 0.004,
+    "is_night": 0.002,
+    "hour_sin": 0.001,
+    "hour_cos": 0.0
+  },
+  "attack_baseline_score": {
+    "n": 535,
+    "success_rate": 0.5159,
+    "mean_queries": 48.5,
+    "money_passed_share": 0.2616,
+    "mean_amount_kept": 0.862
+  },
+  "attack_baseline_label5": {
+    "n": 535,
+    "success_rate": 0.5028,
+    "mean_queries": 3.72,
+    "money_passed_share": 0.2036
+  },
+  "example": {
+    "before": {
+      "amount": 13204.71,
+      "hour": 23.0,
+      "mcc": 6.0,
+      "tx_count_1h": 4.0,
+      "distance_km": 176.4,
+      "is_new_device": 0.0
+    },
+    "after": {
+      "amount": 6760.81,
+      "hour": 19.0,
+      "mcc": 0.0,
+      "tx_count_1h": 2.0,
+      "distance_km": 19.6,
+      "is_new_device": 0.0
+    },
+    "score_before": 0.9969,
+    "score_after": 0.0577
+  },
+  "protected": {
+    "roc_auc": 0.977,
+    "pr_auc": 0.8875,
+    "precision": 0.6581,
+    "recall": 0.8673,
+    "f1": 0.7483,
+    "fpr": 0.009,
+    "threshold": 0.6495
+  },
+  "attack_protected_score": {
+    "n": 510,
+    "success_rate": 0.2745,
+    "mean_queries": 50.1,
+    "money_passed_share": 0.1144,
+    "mean_amount_kept": 0.79
+  },
+  "attack_protected_label5": {
+    "n": 510,
+    "success_rate": 0.2765,
+    "mean_queries": 4.34,
+    "money_passed_share": 0.0937
+  },
+  "service_check": {
+    "cards": 200,
+    "blocked": 186
+  },
+  "latency_open": {
+    "p50_ms": 6.2,
+    "p95_ms": 8.96,
+    "p99_ms": 10.05
+  },
+  "latency_protected": {
+    "p50_ms": 6.21,
+    "p95_ms": 8.38,
+    "p99_ms": 10.3
+  }
+}
